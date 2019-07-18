@@ -1,4 +1,5 @@
 import EventBus, { Subcriber } from './EventBus';
+const eventBus = new EventBus();
 
-export default EventBus;
+export default eventBus;
 export { Subcriber };

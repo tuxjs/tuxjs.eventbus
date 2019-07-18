@@ -9,5 +9,6 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var EventBus_1 = __importStar(require("./EventBus"));
 exports.Subcriber = EventBus_1.Subcriber;
-exports.default = EventBus_1.default;
+var eventBus = new EventBus_1.default();
+module.exports = eventBus;
 //# sourceMappingURL=index.js.map
