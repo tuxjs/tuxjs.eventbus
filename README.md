@@ -8,10 +8,32 @@ Install nodejs in your computer [click here](https://nodejs.org/en/)
 ## How to install @tuxjs/eventbus
 
 ```bash
-npm i -g @tuxjs/eventbus
+
+npm install @tuxjs/eventbus
+
+npm install @tuxjs/eventbus --save-dev
+
 ```
 
-# Guide use @tuxjs/eventbus
+# Guide use @tuxjs/eventbus in ES5
+
+```javascript
+
+const EventBus = require('@tuxjs/eventbus');
+
+const sub = EventBus.subcribe('event', (value) => {
+    console.log('value: ' + value);
+});
+
+EventBus.publish('event', 'Hello es5');
+
+sub.unsubcribe();
+
+EventBus.publish('event', 'Hello es5 again');
+
+```
+
+# Guide use @tuxjs/eventbus in ES6
 
 ```javascript
 
@@ -37,7 +59,7 @@ eventBus.subcribe('event3', (value: any) => {
 
 
 eventBus.publish('event1', 1);
-eventBus.publish('event2', 'hello world 2');
+eventBus.publish('event2', 'hello es6');
 eventBus.publish('event3', "Hi");
 
 sub1.unsubcribe();
@@ -45,7 +67,7 @@ sub1.unsubcribe();
 console.log('-----');
 
 eventBus.publish('event1', 100);
-eventBus.publish('event2', 'hello world 3');
+eventBus.publish('event2', 'hello es6 again');
 eventBus.publish('event3', "Say goodbye");
 
 eventBus.getSubcribers()
