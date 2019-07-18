@@ -1,6 +1,6 @@
 {
   "name": "@tuxjs/eventbus",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Event Bus for JavaScript",
   "main": "bin/index.js",
   "scripts": {
@@ -16,10 +16,10 @@
   },
   "keywords": [
     "tuxjs",
-    "tux js",
+    "nodejs",
     "eventbus",
-    "event bus",
-    "event-bus"
+    "emitter",
+    "event"
   ],
   "devDependencies": {
     "typescript": "^3.5.3",
